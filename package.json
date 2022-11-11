@@ -1,29 +1,80 @@
 {
-  "name": "Instagram",
-  "version": "0.0.1",
-  "private": true,
+  "name": "blott-native-boilerplate",
+  "description": "React Native Starter Kit, using TypeScript with React Native Navigation",
+  "keywords": [
+    "react native",
+    "typescript",
+    "starter kit",
+    "redux thunk",
+    "react native navigation",
+    "boilerplate"
+  ],
+  "version": "0.5.0",
+  "author": {
+    "name": "Yushan Fernando",
+    "email": "yushanwebdev@gmail.com",
+    "url": "https://github.com/yushanwebdev"
+  },
+  "private": false,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint ."
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "cross-env-shell jest",
+    "ios": "npx react-native run-ios --simulator='iPhone 14 Pro'",
+    "android": "npx react-native run-android --variant=Debug",
+    "clean:android": "cd android && ./gradlew clean && ./gradlew :app:bundleRelease && cd ..",
+    "build:android:debug": "./gradlew assembleDebug",
+    "build:android:release": "./gradlew assembleRelease",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts|tsx)\"",
+    "format": "npm run prettier -- --write",
+    "check-format": "npm run prettier -- --check",
+    "check-types": "npx tsc",
+    "validate": "npm run lint && npm run check-format && npm run check-types"
   },
   "dependencies": {
-    "react": "18.1.0",
-    "react-native": "0.70.5"
+    "react": "^17.0.2",
+    "react-native": "^0.66.0",
+    "react-native-navigation": "^7.23.1",
+    "react-native-safe-area-context": "^4.3.1",
+    "react-native-svg": "^12.4.4",
+    "react-redux": "^7.2.4",
+    "redux": "4.1.0",
+    "redux-thunk": "^2.3.0"
   },
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/preset-env": "^7.3.1",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
+    "@tsconfig/react-native": "^2.0.2",
+    "@types/jest": "^26.0.23",
+    "@types/react": "^17.0.15",
+    "@types/react-native": "^0.64.12",
+    "@types/react-redux": "^7.0.1",
+    "@types/react-test-renderer": "^16.0.3",
+    "@types/redux-logger": "^3.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
     "babel-jest": "^26.6.3",
+    "babel-preset-airbnb": "^3.2.0",
+    "babel-preset-react-native": "^4.0.1",
+    "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
-    "jest": "^26.6.3",
-    "metro-react-native-babel-preset": "0.72.3",
-    "react-test-renderer": "18.1.0"
+    "jest": "^25.1.0",
+    "metro-react-native-babel-preset": "^0.66.2",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^17.0.2",
+    "redux-logger": "^3.0.6",
+    "regenerator-runtime": "^0.13.1",
+    "typescript": "^4.4.4"
   },
-  "jest": {
-    "preset": "react-native"
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6.0.0",
+    "yarn": ">=1.9.2"
   }
 }
