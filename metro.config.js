@@ -1,8 +1,4 @@
-const {
-  makeMetroConfig,
-  resolveUniqueModule,
-  exclusionList,
-} = require('@rnx-kit/metro-config');
+const {makeMetroConfig} = require('@rnx-kit/metro-config');
 const {
   CyclicDependencies,
 } = require('@rnx-kit/metro-plugin-cyclic-dependencies-detector');
@@ -12,18 +8,10 @@ const {
 } = require('@rnx-kit/metro-plugin-duplicates-checker');
 const {MetroSerializer} = require('@rnx-kit/metro-serializer');
 
-const [reactIsPath, reactIsExcludePattern] = resolveUniqueModule('react-is');
-const additionalExclusions = [reactIsExcludePattern];
-const blockList = exclusionList(additionalExclusions);
-
 module.exports = makeMetroConfig({
   projectRoot: __dirname,
   resolver: {
     resolveRequest: MetroSymlinksResolver(),
-    extraNodeModules: {
-      'react-is': reactIsPath,
-      blockList,
-    },
   },
   serializer: {
     customSerializer: MetroSerializer([

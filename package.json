@@ -103,17 +103,17 @@
       ]
     },
     "bundle": {
-      "typescriptValidation": true,
-      "entryFile": "index.js",
-      "targets": [
-        "ios"
-      ],
-      "platforms": {
-        "ios": {
-          "bundleOutput": "ios/main.jsbundle",
-          "sourcemapOutput": "ios/main.jsbundle.map",
-          "assetsDest": "ios"
-        }
+      "detectDuplicateDependencies": {
+        "ignoredModules": [
+          "react-is"
+        ]
+      }
+    },
+    "server": {
+      "detectDuplicateDependencies": {
+        "ignoredModules": [
+          "react-is"
+        ]
       }
     }
   }
