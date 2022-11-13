@@ -19,8 +19,8 @@
   "scripts": {
     "start": "react-native rnx-start",
     "test": "cross-env-shell jest",
-    "ios": "react-native rnx-bundle --platform ios",
-    "android": "react-native rnx-bundle --platform android --variant=Debug",
+    "ios": "npx react-native run-ios --simulator='iPhone 14 Pro'",
+    "android": "npx react-native run-android --variant=Debug",
     "clean:android": "cd android && ./gradlew clean && ./gradlew :app:bundleRelease && cd ..",
     "build:android:debug": "./gradlew assembleDebug",
     "build:android:release": "./gradlew assembleRelease",
@@ -53,6 +53,7 @@
     "@rnx-kit/babel-preset-metro-react-native": "^1.1.2",
     "@rnx-kit/cli": "^0.15.0",
     "@rnx-kit/metro-config": "^1.3.3",
+    "@rnx-kit/metro-plugin-cyclic-dependencies-detector": "^1.0.22",
     "@rnx-kit/metro-resolver-symlinks": "^0.1.22",
     "@tsconfig/react-native": "^2.0.2",
     "@types/jest": "^26.0.23",

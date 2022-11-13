@@ -1863,7 +1863,7 @@
     "@rnx-kit/tools-node" "^1.3.0"
     "@rnx-kit/tools-workspaces" "^0.1.3"
 
-"@rnx-kit/metro-plugin-cyclic-dependencies-detector@^1.0.21":
+"@rnx-kit/metro-plugin-cyclic-dependencies-detector@^1.0.21", "@rnx-kit/metro-plugin-cyclic-dependencies-detector@^1.0.22":
   version "1.0.22"
   resolved "https://registry.yarnpkg.com/@rnx-kit/metro-plugin-cyclic-dependencies-detector/-/metro-plugin-cyclic-dependencies-detector-1.0.22.tgz#a1ea605fccf9dbbd82f4847196d564678033b352"
   integrity sha512-srwyqTzG17ju7Xc9G4AqluGYb+8Ka0MYnZX2wklxxwW4Ql+1GjxdyKv7MxA1ZmCL2cKcdnM/MXEWO93d//9s1w==
