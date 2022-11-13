@@ -1805,10 +1805,10 @@
   resolved "https://registry.yarnpkg.com/@react-native/polyfills/-/polyfills-2.0.0.tgz#4c40b74655c83982c8cf47530ee7dc13d957b6aa"
   integrity sha1-TEC3RlXIOYLIz0dTDufcE9lXtqo=
 
-"@rnx-kit/dep-check@^1.14.0":
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/@rnx-kit/dep-check/-/dep-check-1.14.0.tgz#208f8695616179a2042c87096d9eca17db1f0a74"
-  integrity sha512-NGlSI+AEYcrzmCcwjUbtrsWTp9RR16sReq7jEjKblv1o/XgmOMXA6MZ87lj6VL28EUorbBXebQnRrA8E9Hza4A==
+"@rnx-kit/align-deps@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@rnx-kit/align-deps/-/align-deps-2.0.1.tgz#c5331f20fa5d9f0f355c8fc73cdbb018e88bd04d"
+  integrity sha512-tBFM2VR32NEG2gQDFoWkzpargAY8c3eVigBJdnBnlRtFoD+MxvQhOmP5TL/DhxLUbcnrCD+Vd7qe5XhCSfIxFA==
 
 "@sideway/address@^4.1.0":
   version "4.1.2"
