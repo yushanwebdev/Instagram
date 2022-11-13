@@ -77,5 +77,24 @@
     "node": ">=10",
     "npm": ">=6.0.0",
     "yarn": ">=1.9.2"
+  },
+  "rnx-kit": {
+    "kitType": "app",
+    "alignDeps": {
+      "requirements": [
+        "react-native@0.66"
+      ],
+      "capabilities": [
+        "babel-preset-react-native",
+        "core",
+        "core-android",
+        "core-ios",
+        "jest",
+        "react",
+        "react-test-renderer",
+        "safe-area",
+        "svg"
+      ]
+    }
   }
 }
